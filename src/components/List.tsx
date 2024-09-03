@@ -30,23 +30,26 @@ export default function List() {
 
     return (
         <>
-            <h1>Products List</h1>
-            <div className={"container"}>
-                {data.map(item => (
+            <div className={"container-list"}>
+                <h1>Products List</h1>
+                <div className={"container"}>
+                    {data.map(item => (
 
-                    <div key={item.id} className="card">
-                        <div className="card-img">
-                            <img src={item.image} alt={"image"}></img>
+                        <div key={item.id} className="card">
+                            <div className="card-img">
+                                <img className={"image"} src={item.image} alt={"image"}></img>
+                            </div>
+                            <div className="card-info">
+                                <p className="text-title">{item.name} - {item.id}</p>
+                                <p className="text-body">Stock: {item.stock}</p>
+                            </div>
+                            <div className="card-footer">
+                                <span className="text-title">${item.price}</span>
+                            </div>
                         </div>
-                        <div className="card-info">
-                            <p className="text-title">{item.name} - {item.id}</p>
-                            <p className="text-body">Stock: {item.stock}</p>
-                        </div>
-                        <div className="card-footer">
-                            <span className="text-title">${item.price}</span>
-                        </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <button className={"backButton"}>Go Back</button>
             </div>
         </>
     )
