@@ -38,8 +38,8 @@ body {
 }
 
 .card {
-    width: 190px;
-    height: 270px;
+    width: 11.7em;
+    height: 18em;
     padding: .8em;
     background: #f5f5f5;
     color: #1a1a1a;
@@ -126,4 +126,51 @@ svg {
     align-self: center;
     width: fit-content;
     margin-top: 2em;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.delete {
+    width: 2em;
+    height: 2.4em;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+    position: relative;
+    gap: 2px;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: 0.3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.delete:hover {
+    transition-duration: 0.3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+    gap: 0;
+}
+
+.bin-top {
+    transform-origin: bottom right;
+}
+.delete:hover .bin-top {
+    transition-duration: 0.5s;
+    transform: rotate(160deg);
 }
